@@ -5,27 +5,27 @@ const events = [
   {
     title: 'Tech Conference 2024',
     description: 'An annual tech conference with the latest in technology and innovation.',
-    image: './tech-conference.jpg'  // Replace with actual image path
+    image: process.env.PUBLIC_URL + '/tech-conference.jpg'
   },
   {
     title: 'Art Exhibition',
     description: 'A display of the finest art from upcoming artists.',
-    image: 'art-exhibition.jpg'  // Replace with actual image path
+    image: process.env.PUBLIC_URL + '/art-exhibition.jpg'
   },
   {
     title: 'Music Fest',
     description: 'A weekend filled with music from top bands and artists.',
-    image: 'music-fest.jpg'  // Replace with actual image path
+    image: process.env.PUBLIC_URL + '/music-fest.jpg'
   },
   {
     title: 'Science Fair',
     description: 'A showcase of the latest scientific discoveries and projects by students.',
-    image: 'science-fair.jpg'  // Replace with actual image path
+    image: process.env.PUBLIC_URL + '/science-fair.jpg'
   },
   {
     title: 'Sports Day',
     description: 'An exciting day of sports activities and competitions.',
-    image: 'sports-day.jpg'  // Replace with actual image path
+    image: process.env.PUBLIC_URL + '/sports-day.jpg'
   }
 ];
 
@@ -36,7 +36,7 @@ const Events = () => {
     const intervalId = setInterval(() => {
       const randomIndex = Math.floor(Math.random() * events.length);
       setCurrentEvent(events[randomIndex]);
-    }, 2000); // Switch event every 5 seconds
+    }, 5000); // Switch event every 5 seconds
 
     return () => clearInterval(intervalId); // Cleanup interval on component unmount
   }, []);
